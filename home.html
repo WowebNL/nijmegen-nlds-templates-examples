@@ -47,8 +47,14 @@
   <script src="https://unpkg.com/@gemeentenijmegen/web-components/dist/nijmegen-mobile-menu.js" defer></script>
   <script src="https://unpkg.com/@gemeentenijmegen/web-components/dist/nijmegen-toolbar-button.js" defer></script>
 
+  <!-- search -->
+  <script src="https://unpkg.com/@gemeentenijmegen/web-components/dist/nijmegen-search.js" defer></script>
+
   <!-- semantic (WYSIWYG) html -->
   <link rel="stylesheet" href="https://unpkg.com/@gemeentenijmegen/semantic-html@latest/dist/index.css" />
+
+  <!-- button -->
+  <link rel="stylesheet" href="https://unpkg.com/@utrecht/button-css@1.4.0/dist/index.css" />
 
   <!-- heading -->
   <link rel="stylesheet" href="https://unpkg.com/@utrecht/heading-1-css@1.5.0/dist/index.css" />
@@ -428,8 +434,39 @@
       </div>
     </div>
   </nijmegen-header>
-  <p>{ TODO HERO }</p>
-  <div class="utrecht-page-body">
+
+  <section class="nijmegen-hero nijmegen-hero--home" role="region">
+    <div class="nijmegen-hero__container">
+      <div class="nijmegen-hero__content">
+        <div class="nijmegen-hero__content--heading">
+          <h1 class="utrecht-heading-1">Goedemorgen</h1>
+          <p class="utrecht-heading-2">Waar bent u naar op zoek?</p>
+        </div>
+        <nijmegen-search>
+          <div class="nijmegen-search__container">
+            <div class="nijmegen-search__input-holder">
+              <input class="nijmegen-search__input" id="search" type="text" placeholder="Ik ben op zoek naar..." aria-controls="autocomplete-results" aria-autocomplete="both" aria-label="Zoekveld">
+              <button class="nijmegen-search__clear-button nijmegen-search__clear-button--hide" aria-label="Invoer wissen" title="Invoer wissen" tabindex="-1">
+                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="tabler-icon tabler-icon-x "><path d="M18 6l-12 12"></path><path d="M6 6l12 12"></path></svg>
+              </button>
+            </div>
+            <button class="utrecht-button utrecht-button--primary-action nijmegen-search__search-button nijmegen-search__search-button--dark">
+              <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="tabler-icon tabler-icon-search "><path d="M10 10m-7 0a7 7 0 1 0 14 0a7 7 0 1 0 -14 0"></path><path d="M21 21l-6 -6"></path></svg>
+              Zoeken
+            </button>
+          </div>
+          <div class="nijmegen-search__autocomplete-results nijmegen-search__autocomplete-results--example">
+            <div class="nijmegen-listbox" role="listbox">
+              <ul class="nijmegen-listbox__list" role="list"></ul>
+            </div>
+          </div>
+        </nijmegen-search>
+      </div>
+    </div>
+    <img class="nijmegen-hero__image" src="https://picsum.photos/640/360/" alt="Image description">
+  </section>
+
+  <div class="utrecht-page-body nijmegen-padding-block-start-400">
     <div class="utrecht-page-body__content">
       <h2 class="utrecht-heading-2">Meest gezocht</h2>
       <ul class="nijmegen-link-list">
@@ -608,7 +645,7 @@
       </div>
     </div>
   </div>
-  <div class="utrecht-page-body nijmegen-padding-block-400">
+  <div class="utrecht-page-body nijmegen-margin-block-start-400">
     <div class="utrecht-page-body__content">
       <h2 class="utrecht-heading-2">Nieuws</h2>
       <div class="nijmegen-grid nijmegen-margin-block-end-400 nijmegen-padding-block-start-150">
@@ -710,7 +747,21 @@
         </div>
       </div>
       <h2 class="utrecht-heading-2">Ontdek Nijmegen</h2>
-      <p>{TODO IMAGE TEXT BLOCK}</p>
+
+      <div class="nijmegen-image-text-block nijmegen-margin-block-end-400 nijmegen-padding-block-start-150">
+        <div class="nijmegen-image-text-block__content">
+          <div class="nijmegen-image-text-block__message">
+            <h3 class="utrecht-heading-3">Into Nijmegen</h3>
+            <p class="utrecht-paragraph">Op Into Nijmegen vindt u wat er te doen is in Nijmegen, hotspots, een uitagenda en verhalen uit Nijmegen.</p>
+          </div><p role="group" class="utrecht-button-group">
+          <button class="utrecht-button utrecht-button--primary-action" type="button">Ontdek Into Nijmegen</button>
+        </p>
+        </div>
+        <div class="nijmegen-image-text-block__image">
+          <img class="nijmegen-image nijmegen-image--aspect-4-3" src="https://picsum.photos/640/360/" alt="Example image description" width="640" loading="lazy">
+        </div>
+      </div>
+
     </div>
   </div>
   <footer class="nijmegen-footer">
