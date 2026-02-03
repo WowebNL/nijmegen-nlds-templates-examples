@@ -47,6 +47,9 @@
   <script src="https://unpkg.com/@gemeentenijmegen/web-components/dist/nijmegen-mobile-menu.js" defer></script>
   <script src="https://unpkg.com/@gemeentenijmegen/web-components/dist/nijmegen-toolbar-button.js" defer></script>
 
+  <!-- search -->
+  <script src="https://unpkg.com/@gemeentenijmegen/web-components/dist/nijmegen-search.js" defer></script>
+
   <!-- semantic (WYSIWYG) html -->
   <link rel="stylesheet" href="https://unpkg.com/@gemeentenijmegen/semantic-html@latest/dist/index.css" />
 
@@ -66,6 +69,7 @@
   <!-- TODO: Gebruik je eigen hosting voor de CSS, gebruik "https://unpkg.com/" hooguit tijdens development, nooit in productie. -->
   <!-- TODO: Installeer de CSS als dependency, met npm bijvoorbeeld: -->
   <!-- npm install --save @utrecht/root-css @utrecht/body-css @utrecht/design-tokens -->
+
 </head>
 
 <body class="nijmegen-margin-block-0 nijmegen-margin-inline-0 utrecht-document">
@@ -399,201 +403,175 @@
       </div>
     </div>
   </nijmegen-header>
-    <nav aria-label="Broodkruimelnavigatie" class="nijmegen-breadcrumb">
-      <a class="nijmegen-breadcrumb__link nijmegen-breadcrumb__link--mobile" href="https://nijmegen.nl/afval">
-        <span itemProp="name" class="nijmegen-breadcrumb__text"> Fruit </span>
-      </a>
-      <ol itemscope="" itemtype="https://schema.org/BreadcrumbList" class="nijmegen-breadcrumb__list">
-        <li itemprop="itemListElement" itemscope="" itemtype="https://schema.org/ListItem" class="nijmegen-breadcrumb__item">
-          <a class="nijmegen-breadcrumb__link" href="https://nijmegen.nl">
-            <span itemProp="name" class="nijmegen-breadcrumb__text"> Home </span>
-          </a>
-          <meta content="1" itemprop="position" />
-        </li>
-        <li itemprop="itemListElement" itemscope="" itemtype="https://schema.org/ListItem" class="nijmegen-breadcrumb__item">
-          <a class="nijmegen-breadcrumb__link" href="https://nijmegen.nl/afval">
-            <span itemProp="name" class="nijmegen-breadcrumb__text"> Supermarkt </span>
-          </a>
-          <meta content="2" itemprop="position" />
-        </li>
-        <li itemprop="itemListElement" itemscope="" itemtype="https://schema.org/ListItem" class="nijmegen-breadcrumb__item">
-          <a class="nijmegen-breadcrumb__link" href="https://nijmegen.nl/afval">
-            <span itemProp="name" class="nijmegen-breadcrumb__text"> Vers </span>
-          </a>
-          <meta content="3" itemprop="position" />
-        </li>
-        <li itemprop="itemListElement" itemscope="" itemtype="https://schema.org/ListItem" class="nijmegen-breadcrumb__item">
-          <a class="nijmegen-breadcrumb__link" href="https://nijmegen.nl/afval">
-            <span itemProp="name" class="nijmegen-breadcrumb__text"> Fruit </span>
-          </a>
-          <meta content="4" itemprop="position" />
-        </li>
-        <li itemprop="itemListElement" itemscope="" itemtype="https://schema.org/ListItem" class="nijmegen-breadcrumb__item">
-          <a aria-current="page" class="nijmegen-breadcrumb__link nijmegen-breadcrumb__link--disabled" href="https://nijmegen.nl/afval/klikos">
-            <span itemProp="name" class="nijmegen-breadcrumb__text"> Appel </span>
-          </a>
-          <meta content="5" itemprop="position" />
-        </li>
-      </ol>
-    </nav>
+  <nav aria-label="Broodkruimelnavigatie" class="nijmegen-breadcrumb">
+    <a class="nijmegen-breadcrumb__link nijmegen-breadcrumb__link--mobile" href="https://nijmegen.nl/afval">
+      <span itemProp="name" class="nijmegen-breadcrumb__text"> Fruit </span>
+    </a>
+    <ol itemscope="" itemtype="https://schema.org/BreadcrumbList" class="nijmegen-breadcrumb__list">
+      <li itemprop="itemListElement" itemscope="" itemtype="https://schema.org/ListItem"
+          class="nijmegen-breadcrumb__item">
+        <a class="nijmegen-breadcrumb__link" href="https://nijmegen.nl">
+          <span itemProp="name" class="nijmegen-breadcrumb__text"> Home </span>
+        </a>
+        <meta content="1" itemprop="position" />
+      </li>
+      <li itemprop="itemListElement" itemscope="" itemtype="https://schema.org/ListItem"
+          class="nijmegen-breadcrumb__item">
+        <a aria-current="page" class="nijmegen-breadcrumb__link nijmegen-breadcrumb__link--disabled"
+           href="https://nijmegen.nl/afval/klikos">
+          <span itemProp="name" class="nijmegen-breadcrumb__text">Zoeken </span>
+        </a>
+        <meta content="5" itemprop="position" />
+      </li>
+    </ol>
+  </nav>
+
   <div class="utrecht-page-body">
     <div class="utrecht-page-body__content">
 
-        <h1 class="utrecht-heading-1">Paspoort aanvragen</h1>
-        <p class="utrecht-paragraph utrecht-paragraph--lead">Voor een nieuw paspoort maakt u een afspraak in de gemeente waar u woont. U moet uw paspoort zelf aanvragen. U betaalt de kosten bij de aanvraag.</p>
-      
-          <div class="nijmegen-table-of-contents">
-      <h4 class="utrecht-heading-4">Op deze pagina</h4>
-      <ul class="nijmegen-link-list">
-        <li class="nijmegen-link-list__item">
-          <a class="nijmegen-link-list__link" href="#">
-            <span>Meenemen naar de afspraak</span>
-          </a>
-        </li>
-        <li class="nijmegen-link-list__item">
-          <a class="nijmegen-link-list__link" href="#">
-            <span>Aanvragen</span>
-          </a>
-        </li>
-        <li class="nijmegen-link-list__item">
-          <a class="nijmegen-link-list__link" href="#">
-            <span>Kosten</span>
-          </a>
-        </li>
-        <li class="nijmegen-link-list__item">
-          <a class="nijmegen-link-list__link" href="#">
-            <span>Paspoort voor kinderen</span>
-          </a>
-        </li>
-        <li class="nijmegen-link-list__item">
-          <a class="nijmegen-link-list__link" href="#">
-            <span>Paspoort met spoed aanvragen</span>
-          </a>
-        </li>
-        <li class="nijmegen-link-list__item">
-          <a class="nijmegen-link-list__link" href="#">
-            <span>Zakenpaspoort</span>
-          </a>
-        </li>
-      </ul>
-    </div>
-      
-      <div class="nijmegen-html">
-        <h2>Meenemen naar de afspraak</h2>
-        <h3>Reisdocumenten</h3>
-        <p>Neem al uw reisdocumenten mee, inclusief verlopen exemplaren; bij gebrek aan een oud document volstaat een ander geldig identiteitsbewijs zoals een rijbewijs. Verlopen documenten worden ingenomen bij de aanvraag.<p>
-        <h3>Kleurenpasfoto op het juiste formaat</h3>
-        <p>De kleurenpasfoto mag niet ouder zijn dan 6 maanden. We raden aan om een foto van een erkende fotograaf mee te nemen. Bekijk alle vereisten voor pasfoto's op de website van de Rijksoverheid.</p>
-        <h3>Pinpas of contant geld </h3>
-        <p>Betaling vindt plaats aan de balie tijdens uw aanvraag. U kunt op elke locatie contant betalen. Betalen met een creditcard is niet mogelijk.</p>
-        <h3>Documenten voor kinderen</h3>
-        <p>Voor een reisdocument voor kinderen tot 17 jaar is schriftelijke toestemming en identiteitsbewijs van beide ouders of de gezaghebbende nodig. Als één ouder komt, neem dan ook een kopie van het identiteitsbewijs van de andere ouder mee. Zorg voor consistente handtekeningen. </p>
-        <p>Download het toestemmingsformulier hier: <a href="#">schriftelijke toestemming eigen reisdocument kind (pdf, 85 KB)</a>.</p>
-      </div>
-      <h2 class="utrecht-heading-2">Aanvragen</h2>
+      <h1 class="utrecht-heading-1">Zoeken</h1>
 
-      <div class="nijmegen-action-card nijmegen-margin-block-end-200 nijmegen-margin-block-start-150">
-        <div class="nijmegen-action-card__content">
-          <h5 class="utrecht-heading-5">Vraag uw paspoort aan</h5>
-          <p class="utrecht-paragraph">Maak online een afspraak om uw paspoort aan te vragen.</p>
+      <div class="nijmegen-margin-block-end-200 nijmegen-padding-block-start-150">
+        <nijmegen-search>
+          <div class="nijmegen-search__container">
+            <div class="nijmegen-search__input-holder">
+              <input class="nijmegen-search__input" id="search" type="text" placeholder="Zoeken" aria-controls="autocomplete-results" aria-autocomplete="both" aria-label="Zoekveld" />
+              <button class="nijmegen-search__clear-button nijmegen-search__clear-button--hide" aria-label="Invoer wissen" title="Invoer wissen" tabindex="-1" >
+                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="tabler-icon tabler-icon-x " >
+                  <path d="M18 6l-12 12"></path> <path d="M6 6l12 12"></path>
+                </svg>
+              </button>
+            </div>
+            <button class="utrecht-button utrecht-button--primary-action nijmegen-search__search-button">
+              <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="tabler-icon tabler-icon-search " >
+                <path d="M10 10m-7 0a7 7 0 1 0 14 0a7 7 0 1 0 -14 0"></path> <path d="M21 21l-6 -6"></path>
+              </svg>
+              Zoeken
+            </button>
+          </div>
+          <div class="nijmegen-search__autocomplete-results nijmegen-search__autocomplete-results--example">
+            <div class="nijmegen-listbox" role="listbox">
+              <ul class="nijmegen-listbox__list" role="list"></ul>
+            </div>
+          </div>
+        </nijmegen-search>
+        <p class="utrecht-paragraph nijmegen-padding-block-start-200 nijmegen-padding-block-end-100">Uw zoekterm ‘park’ geeft de volgende 82 resultaten</p>
+        <div class="nijmegen-search-results">
+          <h4 class="utrecht-heading-4">
+            <a class="nijmegen-search-results__heading" href="https://www.nijmegen.nl/diensten/evenementen/evenementenlocaties/park-brakkenstein/">
+              Park Brakkenstein
+            </a>
+          </h4>
+          <div class="nijmegen-search-results__content">
+            <div class="nijmegen-search-results__summary">
+              <p class="utrecht-paragraph">
+                Kenmerken van het terrein en informatie over geluid, bereikbaarheid en veiligheid voor locatie Park Brakkenstein.
+              </p>
+            </div>
+            <a href="https://www.nijmegen.nl/diensten/evenementen/evenementenlocaties/park-brakkenstein/" class="utrecht-link utrecht-link--html-a">
+              https://www.nijmegen.nl/diensten/evenementen/evenementenlocaties/park-brakkenstein/
+            </a>
+          </div>
         </div>
-        <p role="group" class="utrecht-button-group">
-          <button class="utrecht-button utrecht-button--primary-action" type="button">Afspraak maken</button>
-        </p>
+        <div class="nijmegen-search-results">
+          <h4 class="utrecht-heading-4">
+            <a class="nijmegen-search-results__heading" href="https://www.nijmegen.nl/diensten/wonen/straat-en-gebouwnamen/">
+              Straat- en gebouwnamen
+            </a>
+          </h4>
+          <div class="nijmegen-search-results__content">
+            <div class="nijmegen-search-results__summary">
+              <p class="utrecht-paragraph">
+                Idee voor nieuwe naam indienen voor een straat, plein, park of andere plek in de openbare ruimte; overzicht bestaande namen
+              </p>
+            </div>
+            <a href="https://www.nijmegen.nl/diensten/wonen/straat-en-gebouwnamen/" class="utrecht-link utrecht-link--html-a">
+              https://www.nijmegen.nl/diensten/wonen/straat-en-gebouwnamen/
+            </a>
+          </div>
+        </div>
+        <div class="nijmegen-search-results">
+          <h4 class="utrecht-heading-4">
+            <a class="nijmegen-search-results__heading" href="https://www.nijmegen.nl/over-de-gemeente/plannen/waalsprong/">
+              Waalsprong
+            </a>
+          </h4>
+          <div class="nijmegen-search-results__content">
+            <div class="nijmegen-search-results__summary">
+              <p class="utrecht-paragraph">
+                Informatie over de ontwikkelingen in Nijmegen-Noord. Naast woningen wordt ook ruimte gemaakt voor bedrijven, scholen, winkels, parken en sportmogelijkheden.
+              </p>
+            </div>
+            <a href="https://www.nijmegen.nl/over-de-gemeente/plannen/waalsprong/" class="utrecht-link utrecht-link--html-a">
+              https://www.nijmegen.nl/over-de-gemeente/plannen/waalsprong/
+            </a>
+          </div>
+        </div>
+        <div class="nijmegen-search-results">
+          <h4 class="utrecht-heading-4">
+            <a class="nijmegen-search-results__heading" href="https://www.nijmegen.nl/diensten/evenementen/evenementenlocaties/julianapark/">
+              Julianapark
+            </a>
+          </h4>
+          <div class="nijmegen-search-results__content">
+            <div class="nijmegen-search-results__summary">
+              <p class="utrecht-paragraph">
+                Julianapark is een evenementenlocatie. Lees hier alle kenmerken van het terrein en vind hier informatie over geluid, bereikbaarheid en veiligheid.
+              </p>
+            </div>
+            <a href="https://www.nijmegen.nl/diensten/evenementen/evenementenlocaties/julianapark/" class="utrecht-link utrecht-link--html-a">
+              https://www.nijmegen.nl/diensten/evenementen/evenementenlocaties/julianapark/
+            </a>
+          </div>
+        </div>
       </div>
 
-      <h2 class="utrecht-heading-2">Kosten</h2>
-    <table class="nijmegen-table nijmegen-table-full-width">
-      <thead class="nijmegen-table__header">
-        <tr class="nijmegen-table__row">
-          <th scope="col" class="nijmegen-table__header-cell">Soort document</th>
-          <th scope="col" class="nijmegen-table__header-cell">Kosten</th>
-          <th scope="col" class="nijmegen-table__header-cell">Kosten spoedaanvraag</th>
-          <th scope="col" class="nijmegen-table__header-cell">Geldigheid</th>
-        </tr>
-      </thead>
-      <tbody class="nijmegen-table__body">
-        <tr class="nijmegen-table__row">
-          <td class="nijmegen-table__data-cell" data-label="Wijk">Paspoort tot 18 jaar</td>
-          <td class="nijmegen-table__data-cell" data-label="Afvalsoort">€ 83,85</td>
-          <td class="nijmegen-table__data-cell" data-label="Ophaaldag">€ 140,90</td>
-          <td class="nijmegen-table__data-cell" data-label="Ophaaldag">10 jaar</td>
-        </tr>
-        <tr class="nijmegen-table__row">
-          <td class="nijmegen-table__data-cell" data-label="Wijk">Paspoort 18 jaar en ouder</td>
-          <td class="nijmegen-table__data-cell" data-label="Afvalsoort">€ 83,85</td>
-          <td class="nijmegen-table__data-cell" data-label="Ophaaldag">€ 63,40</td>
-          <td class="nijmegen-table__data-cell" data-label="Ophaaldag">5 jaar</td>
-        </tr>
-      </tbody>
-    </table>
-      
-      <div class="nijmegen-html">
-        <h2>Paspoort voor kinderen</h2>
-        <p>Uw kind heeft een paspoort of identiteitskaart nodig vanaf:</p>
-        <ul>
-          <li>Elke leeftijd: bij het reizen naar het buitenland.</li>
-          <li>14 jaar: om zich in Nederland te kunnen identificeren.</li>
+      <nav class="nijmegen-pagination" aria-label="Pagina-navigatie">
+        <ul class="nijmegen-pagination-list">
+          <li>
+            <span class="nijmegen-sr-only">Vorige is niet mogelijk</span>
+          </li>
+          <li>
+            <a
+                    class="nijmegen-pagination__page-link nijmegen-pagination__page-link--current"
+                    aria-current="true"
+                    href="./1"
+            >
+              1<span class="nijmegen-sr-only">(huidig)</span>
+            </a>
+          </li>
+          <li>
+            <a class="nijmegen-pagination__page-link" href="./2" rel="next">
+              2
+            </a>
+          </li>
+          <li>
+            <a class="nijmegen-pagination__page-link" href="./3">
+              3
+            </a>
+          </li>
+          <li>
+            <a class="nijmegen-pagination__page-link" href="./4">
+              4
+            </a>
+          </li>
+          <li>
+            <a class="nijmegen-pagination__page-link" href="./5">
+              5
+            </a>
+          </li>
+          <li>
+            <a
+                    href=""
+                    class="nijmegen-pagination__relative-link nijmegen-pagination__relative-link--next"
+                    rel="next"
+            >
+              <span>Volgende</span>
+            </a>
+          </li>
         </ul>
-        <h3>Aanvraag</h3>
-        <p>Voor het aanvragen en afhalen van het paspoort moet het kind zelf aanwezig zijn.
-Bij de afspraak moet minimaal 1 ouder aanwezig zijn, of het kind mag alleen komen als dit mogelijk is. In beide gevallen moeten de volgende documenten worden meegenomen naar de afspraak:</p>
-        <ul>
-          <li><a href="#">Schriftelijke toestemming voor het reisdocument van het kind (PDF, 85 KB)</a> van beide ouders of de persoon met het gezag.</li>
-          <li>Identiteitsbewijs van beide ouders of van de persoon met het gezag.</li>
-        </ul>
-        <h3>Andere achternaam</h3>
-        <p>Als u of uw partner een andere achternaam heeft bij reizen met uw kind naar het buitenland, kan dit problemen opleveren bij een paspoortcontrole. U heeft een bewijs nodig dat u de vader of moeder bent of het ouderlijk gezag heeft. U regelt het bij de Marechaussee.</p>
-      </div>
-      <h2 class="utrecht-heading-2">Paspoort met spoed aanvragen</h2>
-      <p class="utrecht-paragraph">Een spoedaanvraag voor een paspoort regelt u zo:</p>
-      
-<ol class="nijmegen-step-list">
-  <li class="nijmegen-step-list__item">
-    <div class="nijmegen-step-list__header">
-      <h5 class="utrecht-heading-5">Afspraak maken</h5>
-    </div>
-    <div class="nijmegen-step-list__body">
-      <p class="utrecht-paragraph">
-        Plan voor 14.00 uur een afspraak in de Stadswinkel. U kunt hiervoor niet terecht in het steunpunt Stadswinkel Dukenburg.
-      </p>
-      <a
-  href="https://example.com"
-  class="utrecht-link utrecht-link--html-a"
-  title="Link"
->
-  Afspraak maken
-</a>
-    </div>
-  </li>
-  <li class="nijmegen-step-list__item">
-    <div class="nijmegen-step-list__header">
-      <h5 class="utrecht-heading-5">Aanvraag aan de balie</h5>
-    </div>
-    <div class="nijmegen-step-list__body">
-      <p class="utrecht-paragraph">
-        Tijdens uw afspraak aan de balie, kunt u specifiek verzoeken om een spoedaanvraag te doen.
-      </p>
-    </div>
-  </li>
-  <li class="nijmegen-step-list__item">
-    <div class="nijmegen-step-list__header">
-      <h5 class="utrecht-heading-5">Heading</h5>
-    </div>
-    <div class="nijmegen-step-list__body">
-      <p class="utrecht-paragraph">
-        Uw paspoort is de volgende werkdag na 10.30 uur beschikbaar, maar in sommige gevallen kan het tot 2 werkdagen duren, zoals bij verlies of diefstal van uw oude identiteitsbewijs zonder vervanging.
-      </p>
-    </div>
-  </li>
-</ol>
+      </nav>
 
-      <div class="nijmegen-html">
-        <h2>Zakenpaspoort</h2>
-        <p>Gaat u veel reizen voor uw werk? Vraag dan een zakenpaspoort aan in plaats van een normaal paspoort. Het zakenpaspoort heeft méér pagina's voor visa en stempels.</p>
-      </div>
-      </div>
-      </div>
     </div>
   </div>
   <footer class="nijmegen-footer">

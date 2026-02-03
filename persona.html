@@ -47,19 +47,12 @@
   <script src="https://unpkg.com/@gemeentenijmegen/web-components/dist/nijmegen-mobile-menu.js" defer></script>
   <script src="https://unpkg.com/@gemeentenijmegen/web-components/dist/nijmegen-toolbar-button.js" defer></script>
 
-  <!-- search -->
-  <script src="https://unpkg.com/@gemeentenijmegen/web-components/dist/nijmegen-search.js" defer></script>
-
   <!-- semantic (WYSIWYG) html -->
   <link rel="stylesheet" href="https://unpkg.com/@gemeentenijmegen/semantic-html@latest/dist/index.css" />
-
-  <!-- button -->
-  <link rel="stylesheet" href="https://unpkg.com/@utrecht/button-css@1.4.0/dist/index.css" />
 
   <!-- heading -->
   <link rel="stylesheet" href="https://unpkg.com/@utrecht/heading-1-css@1.5.0/dist/index.css" />
   <link rel="stylesheet" href="https://unpkg.com/@utrecht/heading-2-css@1.5.0/dist/index.css" />
-  <link rel="stylesheet" href="https://unpkg.com/@utrecht/heading-4-css@1.5.0/dist/index.css" />
 
   <!-- pre-heading component -->
   <link rel="stylesheet" href="https://unpkg.com/@utrecht/pre-heading-css@2.0.1/dist/index.css" />
@@ -70,11 +63,11 @@
 
   <!-- TODO: Gebruik je eigen hosting voor de CSS, gebruik "https://unpkg.com/" hooguit tijdens development, nooit in productie. -->
   <!-- TODO: Installeer de CSS als dependency, met npm bijvoorbeeld: -->
-  <!-- npm install --save @gemeentenijmegen/design-tokens -->
+  <!-- npm install --save @utrecht/root-css @utrecht/body-css @utrecht/design-tokens -->
 </head>
 <!-- Gebruik de Body component -->
-<!-- Met de Body margin classes kan de volledige hoogte en breedte van de pagina gebruikt kan worden voor de Page Layout. -->
-<!-- Met de document class stel je de default font-size van je pagina in. -->
+<!-- Met de Body component kan de volledige hoogte en breedte van de pagina gebruikt kan worden voor de Page Layout. -->
+<!-- Met de Body component stel je de default font-size van je pagina in. -->
 
 <body class="nijmegen-margin-block-0 nijmegen-margin-inline-0 utrecht-document">
   <!-- Gebruik de Skip Link component zodat gebruikers blokken kunnen overslaan die op meerdere pagina's voorkomen, zoals de Page Header. -->
@@ -434,334 +427,108 @@
       </div>
     </div>
   </nijmegen-header>
-
-  <section class="nijmegen-hero nijmegen-hero--home" role="region">
-    <div class="nijmegen-hero__container">
-      <div class="nijmegen-hero__content">
-        <div class="nijmegen-hero__content--heading">
-          <h1 class="utrecht-heading-1">Goedemorgen</h1>
-          <p class="utrecht-heading-2">Waar bent u naar op zoek?</p>
-        </div>
-        <nijmegen-search>
-          <div class="nijmegen-search__container">
-            <div class="nijmegen-search__input-holder">
-              <input class="nijmegen-search__input" id="search" type="text" placeholder="Ik ben op zoek naar..." aria-controls="autocomplete-results" aria-autocomplete="both" aria-label="Zoekveld">
-              <button class="nijmegen-search__clear-button nijmegen-search__clear-button--hide" aria-label="Invoer wissen" title="Invoer wissen" tabindex="-1">
-                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="tabler-icon tabler-icon-x "><path d="M18 6l-12 12"></path><path d="M6 6l12 12"></path></svg>
-              </button>
-            </div>
-            <button class="utrecht-button utrecht-button--primary-action nijmegen-search__search-button nijmegen-search__search-button--dark">
-              <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="tabler-icon tabler-icon-search "><path d="M10 10m-7 0a7 7 0 1 0 14 0a7 7 0 1 0 -14 0"></path><path d="M21 21l-6 -6"></path></svg>
-              Zoeken
-            </button>
-          </div>
-          <div class="nijmegen-search__autocomplete-results nijmegen-search__autocomplete-results--example">
-            <div class="nijmegen-listbox" role="listbox">
-              <ul class="nijmegen-listbox__list" role="list"></ul>
-            </div>
-          </div>
-        </nijmegen-search>
-      </div>
-    </div>
-    <img class="nijmegen-hero__image" src="https://picsum.photos/640/360/" alt="Image description">
-  </section>
-
-  <div class="utrecht-page-body nijmegen-padding-block-start-400">
+  <nav aria-label="Broodkruimelnavigatie" class="nijmegen-breadcrumb">
+    <a class="nijmegen-breadcrumb__link nijmegen-breadcrumb__link--mobile" href="https://nijmegen.nl/afval">
+      <span itemProp="name" class="nijmegen-breadcrumb__text"> Fruit </span>
+    </a>
+    <ol itemscope="" itemtype="https://schema.org/BreadcrumbList" class="nijmegen-breadcrumb__list">
+      <li itemprop="itemListElement" itemscope="" itemtype="https://schema.org/ListItem"
+        class="nijmegen-breadcrumb__item">
+        <a class="nijmegen-breadcrumb__link" href="https://nijmegen.nl">
+          <span itemProp="name" class="nijmegen-breadcrumb__text"> Home </span>
+        </a>
+        <meta content="1" itemprop="position" />
+      </li>
+      <li itemprop="itemListElement" itemscope="" itemtype="https://schema.org/ListItem"
+          class="nijmegen-breadcrumb__item">
+        <a class="nijmegen-breadcrumb__link" href="https://nijmegen.nl/">
+          <span itemProp="name" class="nijmegen-breadcrumb__text"> Over de gemeente </span>
+        </a>
+        <meta content="2" itemprop="position" />
+      </li>
+      <li itemprop="itemListElement" itemscope="" itemtype="https://schema.org/ListItem"
+          class="nijmegen-breadcrumb__item">
+        <a class="nijmegen-breadcrumb__link" href="https://nijmegen.nl/">
+          <span itemProp="name" class="nijmegen-breadcrumb__text"> Burgemeester en wethouders </span>
+        </a>
+        <meta content="3" itemprop="position" />
+      </li>
+      <li itemprop="itemListElement" itemscope="" itemtype="https://schema.org/ListItem"
+        class="nijmegen-breadcrumb__item">
+        <a class="nijmegen-breadcrumb__link" href="https://nijmegen.nl/">
+          <span itemProp="name" class="nijmegen-breadcrumb__text"> College burgemeester en wethouders </span>
+        </a>
+        <meta content="4" itemprop="position" />
+      </li>
+      <li itemprop="itemListElement" itemscope="" itemtype="https://schema.org/ListItem"
+        class="nijmegen-breadcrumb__item">
+        <a aria-current="page" class="nijmegen-breadcrumb__link nijmegen-breadcrumb__link--disabled"
+          href="https://nijmegen.nl/">
+          <span itemProp="name" class="nijmegen-breadcrumb__text"> Burgemeester H.M.F. Bruls </span>
+        </a>
+        <meta content="5" itemprop="position" />
+      </li>
+    </ol>
+  </nav>
+  <div class="utrecht-page-body">
     <div class="utrecht-page-body__content">
-      <h2 class="utrecht-heading-2">Meest gezocht</h2>
-      <ul class="nijmegen-link-list">
-        <li class="nijmegen-link-list__item">
-          <a class="nijmegen-link-list__link" href="#"> Paspoort aanvragen </a>
-        </li>
-        <li class="nijmegen-link-list__item">
-          <a class="nijmegen-link-list__link" href="#"> Belastingaanslag betalen </a>
-        </li>
-        <li class="nijmegen-link-list__item">
-          <a class="nijmegen-link-list__link" href="#"> Verhuizing doorgeven </a>
-        </li>
-        <li class="nijmegen-link-list__item">
-          <a class="nijmegen-link-list__link" href="#"> Een afspraak maken </a>
-        </li>
-      </ul>
-
-    </div>
-  </div>
-  <div class="utrecht-page-body utrecht-page-body--grijs-100 nijmegen-padding-block-400">
-    <div class="utrecht-page-body__content">
-      <h2 class="utrecht-heading-2">Onderwerpen</h2>
-      <div class="nijmegen-grid nijmegen-margin-block-end-0 nijmegen-padding-block-start-150">
-        <div class="nijmegen-g-col-lg-4 nijmegen-g-col-12">
-          <div class="nijmegen-topic-block">
-            <h4 class="utrecht-heading-4">Aanvragen</h4>
-            <ul class="nijmegen-link-list">
-              <li class="nijmegen-link-list__item">
-                <a class="nijmegen-link-list__link" href="#"> Paspoort aanvragen </a>
-              </li>
-              <li class="nijmegen-link-list__item">
-                <a class="nijmegen-link-list__link" href="#"> Belastingaanslag betalen </a>
-              </li>
-              <li class="nijmegen-link-list__item">
-                <a class="nijmegen-link-list__link" href="#"> Verhuizing doorgeven </a>
-              </li>
-              <li class="nijmegen-link-list__item">
-                <a class="nijmegen-link-list__link" href="#"> Een afspraak maken </a>
-              </li>
-            </ul>
-          </div>
-        </div>
-        <div class="nijmegen-g-col-lg-4 nijmegen-g-col-12">
-          <div class="nijmegen-topic-block">
-            <h4 class="utrecht-heading-4">Parkeren en vervoer</h4>
-            <ul class="nijmegen-link-list">
-              <li class="nijmegen-link-list__item">
-                <a class="nijmegen-link-list__link" href="#"> Parkeervergunning en abonnementen </a>
-              </li>
-              <li class="nijmegen-link-list__item">
-                <a class="nijmegen-link-list__link" href="#"> Parkeren met de auto </a>
-              </li>
-              <li class="nijmegen-link-list__item">
-                <a class="nijmegen-link-list__link" href="#"> Ontheffingen betaald parkeren </a>
-              </li>
-              <li class="nijmegen-link-list__item">
-                <a class="nijmegen-link-list__link" href="#"> Vervoer </a>
-              </li>
-            </ul>
-          </div>
-        </div>
-        <div class="nijmegen-g-col-lg-4 nijmegen-g-col-12">
-          <div class="nijmegen-topic-block">
-            <h4 class="utrecht-heading-4">Leven</h4>
-            <ul class="nijmegen-link-list">
-              <li class="nijmegen-link-list__item">
-                <a class="nijmegen-link-list__link" href="#"> Geboorte en overlijden</a>
-              </li>
-              <li class="nijmegen-link-list__item">
-                <a class="nijmegen-link-list__link" href="#"> Identiteit en inschrijving </a>
-              </li>
-              <li class="nijmegen-link-list__item">
-                <a class="nijmegen-link-list__link" href="#"> Nieuw in Nijmegen </a>
-              </li>
-              <li class="nijmegen-link-list__item">
-                <a class="nijmegen-link-list__link" href="#"> School </a>
-              </li>
-              <li class="nijmegen-link-list__item">
-                <a class="nijmegen-link-list__link" href="#"> Trouwen en scheiden </a>
-              </li>
-              <li class="nijmegen-link-list__item">
-                <a class="nijmegen-link-list__link" href="#"> Verhuizen </a>
-              </li>
-            </ul>
-          </div>
-        </div>
-        <div class="nijmegen-g-col-lg-4 nijmegen-g-col-12">
-          <div class="nijmegen-topic-block">
-            <h4 class="utrecht-heading-4">Geldzaken</h4>
-            <ul class="nijmegen-link-list">
-              <li class="nijmegen-link-list__item">
-                <a class="nijmegen-link-list__link" href="#"> Uitkering en vergoedingen</a>
-              </li>
-              <li class="nijmegen-link-list__item">
-                <a class="nijmegen-link-list__link" href="#"> Belasting </a>
-              </li>
-              <li class="nijmegen-link-list__item">
-                <a class="nijmegen-link-list__link" href="#"> Leningen </a>
-              </li>
-            </ul>
-          </div>
-        </div>
-        <div class="nijmegen-g-col-lg-4 nijmegen-g-col-12">
-          <div class="nijmegen-topic-block">
-            <h4 class="utrecht-heading-4">Zorg en hulp</h4>
-            <ul class="nijmegen-link-list">
-              <li class="nijmegen-link-list__item">
-                <a class="nijmegen-link-list__link" href="#"> Wmo</a>
-              </li>
-              <li class="nijmegen-link-list__item">
-                <a class="nijmegen-link-list__link" href="#"> Mantelzorg </a>
-              </li>
-              <li class="nijmegen-link-list__item">
-                <a class="nijmegen-link-list__link" href="#"> Sociale hulp </a>
-              </li>
-            </ul>
-          </div>
-        </div>
-        <div class="nijmegen-g-col-lg-4 nijmegen-g-col-12">
-          <div class="nijmegen-topic-block">
-            <h4 class="utrecht-heading-4">Bouwen, wonen en duurzaamheid</h4>
-            <ul class="nijmegen-link-list">
-              <li class="nijmegen-link-list__item">
-                <a class="nijmegen-link-list__link" href="#"> Vergunningen</a>
-              </li>
-              <li class="nijmegen-link-list__item">
-                <a class="nijmegen-link-list__link" href="#"> Bodem en water </a>
-              </li>
-              <li class="nijmegen-link-list__item">
-                <a class="nijmegen-link-list__link" href="#"> Wonen </a>
-              </li>
-              <li class="nijmegen-link-list__item">
-                <a class="nijmegen-link-list__link" href="#"> Duurzaam huis of bedrijf </a>
-              </li>
-            </ul>
-          </div>
-        </div>
-        <div class="nijmegen-g-col-lg-4 nijmegen-g-col-12">
-          <div class="nijmegen-topic-block">
-            <h4 class="utrecht-heading-4">Sport, cultuur & evenementen</h4>
-            <ul class="nijmegen-link-list">
-              <li class="nijmegen-link-list__item">
-                <a class="nijmegen-link-list__link" href="#"> Sport & subsidies</a>
-              </li>
-              <li class="nijmegen-link-list__item">
-                <a class="nijmegen-link-list__link" href="#"> Evenementen </a>
-              </li>
-              <li class="nijmegen-link-list__item">
-                <a class="nijmegen-link-list__link" href="#"> Vierdaagse </a>
-              </li>
-              <li class="nijmegen-link-list__item">
-                <a class="nijmegen-link-list__link" href="#"> Cultuur(subsidies) </a>
-              </li>
-            </ul>
-          </div>
-        </div>
-        <div class="nijmegen-g-col-lg-4 nijmegen-g-col-12">
-          <div class="nijmegen-topic-block">
-            <h4 class="utrecht-heading-4">Ondernemen</h4>
-            <ul class="nijmegen-link-list">
-              <li class="nijmegen-link-list__item">
-                <a class="nijmegen-link-list__link" href="#"> Vergunning of meldings</a>
-              </li>
-              <li class="nijmegen-link-list__item">
-                <a class="nijmegen-link-list__link" href="#"> Horeca </a>
-              </li>
-              <li class="nijmegen-link-list__item">
-                <a class="nijmegen-link-list__link" href="#"> Verkopen </a>
-              </li>
-              <li class="nijmegen-link-list__item">
-                <a class="nijmegen-link-list__link" href="#"> Hulp voor ondernemers </a>
-              </li>
-            </ul>
-          </div>
-        </div>
+      <h1 class="utrecht-heading-1">Burgemeester Hubert Bruls</h1>
+      <!-- TODO remove nijmegen-margin-block-200 on nijmegen-image spacing matrix implementation -->
+      <!-- question: image in semantic html? -->
+      <img
+        class="nijmegen-image nijmegen-image--aspect-16-9 nijmegen-margin-block-200"
+        src="https://picsum.photos/1200/675/"
+        alt="Example image description"
+        loading="lazy"
+      />
+      <div class="nijmegen-html">
+        <p>Burgemeester H.M.F. (Hubert) Bruls is verantwoordelijk voor:</p>
+        <ul>
+          <li>openbare orde en veiligheid</li>
+          <li>dienstverlening en burgerzaken</li>
+          <li>externe betrekkingen</li>
+          <li>juridische zaken</li>
+          <li>communicatie</li>
+          <li>onderzoek en statistiek</li>
+        </ul>
+        <p>In de <a href="#">podcastserie 'Groeipijnen van Nijmegen'</a> gaat burgemeester Bruls in gesprek met presentator Gijs de Bakker over verschillende dilemma's en uitdagingen die een groeiende stad met zich meebrengt. Want het aantal inwoners stijgt, maar de stadsgrenzen blijven gelijk. In totaal zijn er 5 afleveringen met verschillende thema's. </p>
+        <h2 class="utrecht-heading-2">Contact</h2>
+        <ul>
+          <li><a href="#">secretariaatburgemeester@nijmegen.nl</a></li>
+          <li>024 - 329 23 49</li>
+          <li>Of mail de burgemeester rechtstreeks: <a href="#">h.bruls@nijmegen.nl</a></li>
+        </ul>
+        <h2 class="utrecht-heading-2">Voor de pers</h2>
+        <p>Perswoordvoerder van de burgemeester is Sandra Bronkhorst:</p>
+        <ul>
+          <li><a href="#">s.bronkhorst@nijmegen.nl</a></li>
+          <li>06 - 46 34 44 87</li>
+        </ul>
+        <h2 class="utrecht-heading-2">Uitnodigen voor officiële handeling</h2>
+        <p><a href="#">odig de burgemeester uit</a> voor een officiële handeling bij een jubileum, opening, viering of andere gelegenheid.</p>
+        <h2 class="utrecht-heading-2">Nevenfuncties</h2>
+        <ul>
+          <li>Regioburgemeester Oost Nederland</li>
+          <li>Voorzitter Veiligheidsregio Gelderland-Zuid</li>
+          <li>Lid Algemeen Bestuur van de G40</li>
+          <li>Voorzitter Euregio Rijn-Waal</li>
+          <li>Voorzitter Raad van Toezicht Burgernet</li>
+          <li>Voorzitter Modulaire Gemeenschappelijke Regeling (MGR)</li>
+          <li>Voorzitter algemeen bestuur Groene Metropoolregio</li>
+        </ul>
+        <h2 class="utrecht-heading-2">Nevenfuncties</h2>
+        <ul>
+          <li>Voorzitter Stichting Normering Arbeid, inkomsten gemiddeld € 7.000,- bruto per jaar.</li>
+          <li>Voorzitter Raad van Toezicht van Stichting Extra Zorg Samen. De vergoeding bedraagt € 10.500,- per jaar (excl. btw en reiskostenvergoeding).</li>
+        </ul>
+        <h2 class="utrecht-heading-2">Comité van Aanbeveling, erevoorzitterschappen en erelidmaatschappen</h2>
+        <p>De burgemeester is lid van <a href="#">diverse Comités van Aanbeveling.</a></p>
+        <h2 class="utrecht-heading-2">CV</h2>
+        <p>Hubert Bruls (1966) is sinds 21 mei 2012 burgemeester van Nijmegen. Hij is verantwoordelijk voor openbare orde en veiligheid, dienstverlening en burgerzaken, externe betrekkingen, juridische zaken, communicatie, onderzoek en statistiek. Na een korte periode als gemeenteraadslid in 1998, was hij tussen 1999 en 2002 wethouder in Nijmegen.</p>
+        <p>Van mei 2002 tot oktober 2005 was Bruls Tweede Kamerlid voor het CDA. In oktober 2005 werd hij burgemeester van Venlo. Na de fusie van Venlo met Arcen en Velden was hij waarnemend burgemeester van het nieuwe Venlo en in juli 2010 werd hij daar burgemeester.  </p>
+        <p>Bruls deed eindexamen gymnasium B en studeerde politicologie aan de Katholieke Universiteit Nijmegen, nu Radboud Universiteit Nijmegen, afstudeerrichting politicologie en economie.</p>
+        <p>Hij begon vervolgens zijn loopbaan bij ambtenarenvakbond NOVON/ABVAKABO.</p>
       </div>
-    </div>
-  </div>
-  <div class="utrecht-page-body nijmegen-margin-block-start-400">
-    <div class="utrecht-page-body__content">
-      <h2 class="utrecht-heading-2">Nieuws</h2>
-      <div class="nijmegen-grid nijmegen-margin-block-end-400 nijmegen-padding-block-start-150">
-        <div class="nijmegen-g-col-lg-4 nijmegen-g-col-12">
-          <div class="nijmegen-card">
-            <div class="nijmegen-card__inner">
-              <div class="nijmegen-card__content">
-                <h4 class="utrecht-heading-4">
-                  <a class="nijmegen-card__link" href="/">Nijmeegse lintjesregen</a>
-                </h4>
-              </div>
-            </div>
-            <div class="nijmegen-card__footer">
-              <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none"
-                stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"
-                class="tabler-icon tabler-icon-arrow-right">
-                <path d="M5 12l14 0"></path>
-                <path d="M13 18l6 -6"></path>
-                <path d="M13 6l6 6"></path>
-              </svg>
-              <div class="nijmegen-card__meta-item">
-                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none"
-                  stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"
-                  class="tabler-icon tabler-icon-calendar-event" aria-label="Datum: ">
-                  <path d="M4 5m0 2a2 2 0 0 1 2 -2h12a2 2 0 0 1 2 2v12a2 2 0 0 1 -2 2h-12a2 2 0 0 1 -2 -2z"></path>
-                  <path d="M16 3l0 4"></path>
-                  <path d="M8 3l0 4"></path>
-                  <path d="M4 11l16 0"></path>
-                  <path d="M8 15h2v2h-2z"></path>
-                </svg>
-                <span>7 februari 2024</span>
-              </div>
-            </div>
-          </div>
-        </div>
-        <div class="nijmegen-g-col-lg-4 nijmegen-g-col-12">
-          <div class="nijmegen-card">
-            <div class="nijmegen-card__inner">
-              <div class="nijmegen-card__content">
-                <h4 class="utrecht-heading-4">
-                  <a class="nijmegen-card__link" href="/">Bijeenkomst deelnemende partijen gemeenteraads-verkiezingen</a>
-                </h4>
-              </div>
-            </div>
-            <div class="nijmegen-card__footer">
-              <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none"
-                stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"
-                class="tabler-icon tabler-icon-arrow-right">
-                <path d="M5 12l14 0"></path>
-                <path d="M13 18l6 -6"></path>
-                <path d="M13 6l6 6"></path>
-              </svg>
-              <div class="nijmegen-card__meta-item">
-                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none"
-                  stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"
-                  class="tabler-icon tabler-icon-calendar-event" aria-label="Datum: ">
-                  <path d="M4 5m0 2a2 2 0 0 1 2 -2h12a2 2 0 0 1 2 2v12a2 2 0 0 1 -2 2h-12a2 2 0 0 1 -2 -2z"></path>
-                  <path d="M16 3l0 4"></path>
-                  <path d="M8 3l0 4"></path>
-                  <path d="M4 11l16 0"></path>
-                  <path d="M8 15h2v2h-2z"></path>
-                </svg>
-                <span>7 februari 2024</span>
-              </div>
-            </div>
-          </div>
-        </div>
-        <div class="nijmegen-g-col-lg-4 nijmegen-g-col-12">
-          <div class="nijmegen-card">
-            <div class="nijmegen-card__inner">
-              <div class="nijmegen-card__content">
-                <h4 class="utrecht-heading-4">
-                  <a class="nijmegen-card__link" href="/">Werkzaamheden S100/Neerbosscheweg</a>
-                </h4>
-              </div>
-            </div>
-            <div class="nijmegen-card__footer">
-              <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none"
-                stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"
-                class="tabler-icon tabler-icon-arrow-right">
-                <path d="M5 12l14 0"></path>
-                <path d="M13 18l6 -6"></path>
-                <path d="M13 6l6 6"></path>
-              </svg>
-              <div class="nijmegen-card__meta-item">
-                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none"
-                  stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"
-                  class="tabler-icon tabler-icon-calendar-event" aria-label="Datum: ">
-                  <path d="M4 5m0 2a2 2 0 0 1 2 -2h12a2 2 0 0 1 2 2v12a2 2 0 0 1 -2 2h-12a2 2 0 0 1 -2 -2z"></path>
-                  <path d="M16 3l0 4"></path>
-                  <path d="M8 3l0 4"></path>
-                  <path d="M4 11l16 0"></path>
-                  <path d="M8 15h2v2h-2z"></path>
-                </svg>
-                <span>7 februari 2024</span>
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
-      <h2 class="utrecht-heading-2">Ontdek Nijmegen</h2>
-
-      <div class="nijmegen-image-text-block nijmegen-margin-block-end-400 nijmegen-padding-block-start-150">
-        <div class="nijmegen-image-text-block__content">
-          <div class="nijmegen-image-text-block__message">
-            <h3 class="utrecht-heading-3">Into Nijmegen</h3>
-            <p class="utrecht-paragraph">Op Into Nijmegen vindt u wat er te doen is in Nijmegen, hotspots, een uitagenda en verhalen uit Nijmegen.</p>
-          </div><p role="group" class="utrecht-button-group">
-          <button class="utrecht-button utrecht-button--primary-action" type="button">Ontdek Into Nijmegen</button>
-        </p>
-        </div>
-        <div class="nijmegen-image-text-block__image">
-          <img class="nijmegen-image nijmegen-image--aspect-4-3" src="https://picsum.photos/640/360/" alt="Example image description" width="640" loading="lazy">
-        </div>
-      </div>
-
     </div>
   </div>
   <footer class="nijmegen-footer">
