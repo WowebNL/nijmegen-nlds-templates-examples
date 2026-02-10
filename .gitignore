@@ -1,0 +1,9 @@
+*~
+DEADJOE
+._*
+*.DS_Store
+*.idea/
+node_modules/
+dist/
+sw.*
+npm-debug.log
