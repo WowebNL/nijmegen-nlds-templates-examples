@@ -53,6 +53,11 @@
   <!-- button -->
   <link rel="stylesheet" href="https://unpkg.com/@utrecht/button-css@1.4.0/dist/index.css" />
 
+  <!-- accordion -->
+  <link rel="stylesheet" href="https://unpkg.com/@utrecht/accordion-css@1.4.0/dist/index.css" />
+  <link rel="stylesheet" href="https://unpkg.com/@utrecht/accordion-css@1.4.0/dist/index.css" />
+  <script src="https://unpkg.com/@gemeentenijmegen/web-components/dist/nijmegen-accordion.js" defer></script>
+
   <!-- heading  -->
   <link rel="stylesheet" href="https://unpkg.com/@utrecht/heading-1-css@1.5.0/dist/index.css" />
   <link rel="stylesheet" href="https://unpkg.com/@utrecht/heading-2-css@1.5.0/dist/index.css" />
@@ -410,7 +415,7 @@
       </li>
       <li itemprop="itemListElement" itemscope="" itemtype="https://schema.org/ListItem" class="nijmegen-breadcrumb__item">
         <a aria-current="page" class="nijmegen-breadcrumb__link nijmegen-breadcrumb__link--disabled" href="https://nijmegen.nl/contact">
-          <span itemProp="name" class="nijmegen-breadcrumb__text">Contact</span>
+          <span itemProp="name" class="nijmegen-breadcrumb__text">Accordion</span>
         </a>
         <meta content="3" itemprop="position" />
       </li>
@@ -421,116 +426,60 @@
     <div class="nijmegen-hero__container">
       <div class="nijmegen-hero__content">
         <div class="nijmegen-hero__content--heading">
-          <h1 class="utrecht-heading-1">Contact</h1>
+          <h1 class="utrecht-heading-1">Accordion example</h1>
         </div>
-        <p class="utrecht-paragraph">Neem contact op met de gemeente op de manier die u het beste uitkomt. U kunt een digitaal formulier invullen om een vraag te stellen of feedback te geven, of ons bellen voor passend advies.</p>
+        <p class="utrecht-paragraph">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec tincidunt, tortor eu accumsan vulputate, urna tortor consectetur augue, a hendrerit lectus tortor at ligula.</p>
       </div>
     </div>
   </section>
 
   <div class="utrecht-page-body nijmegen-padding-block-start-300 nijmegen-padding-block-end-300">
     <div class="utrecht-page-body__content">
-
-      <div class="nijmegen-html">
-        <h2>Contact opnemen</h2>
-        <p>Vul het contactformulier in om uw vraag te stellen, een idee aan te dragen of een klacht in te dienen. Reactie binnen 5 werkdagen.<p>
-        <button class="utrecht-button utrecht-button--primary-action nijmegen-margin-block-start-100 nijmegen-margin-block-end-100" type="button">
-          Contactformulier invullen
-          <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-            <path stroke="none" d="M0 0h24v24H0z" fill="none"></path>
-            <path d="M5 12l14 0"></path>
-            <path d="M13 18l6 -6"></path>
-            <path d="M13 6l6 6"></path>
-          </svg>
-        </button>
-        <p>Moet u persoonsgegevens met ons delen? Gebruik dan <a href="#">veilig mailen</a> (zie ook de <a href="#">uitleg over veilig mailen</a>).</p>
-        <p>Hebt u een klacht over de gemeente of de medewerkers? Dan kunt u een <a href="#">klacht indienen</a>.</p>
-        <h2>Telefoonnummer</h2>
-        <p>Ons telefoonnummer is <a href="">14 024</a> (of <a href="">024 329 90 00</a>). We zijn bereikbaar op werkdagen van 9.00 - 17.00 uur.</p>
-        <p>Bellen vanuit het buitenland/calling from abroad:<br><a href="">0031 24 329 90 00</a>.</p>
-        <p>Doof of slechthorend? Bel de <a href="">teletolk</a>.</p>
-        <p class="nijmegen-padding-block-start-100"><img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAM4AAAA9CAYAAADlGVZzAAAACXBIWXMAAAsSAAALEgHS3X78AAAd20lEQVR4nO1dfVAb551+2iG2I+ERDh/Cbs+SgXNKYyOm8jVJiQVnxcB9GOVE445jjFI7xXfxlQ95hkxNoiRK8E2YCx/O2BNw4SJZsa+5QxdwpwO48oAodpuiDpLdEueQjWjrAMYBTZBqu9zl/tgPdqVdaVcI7Gt5ZjJB2t13d633eX/fv/dLX3zxBZYDCdqyJAAFAHLJ/ysBKJblZqtYBQEfgHEA/QBGAPQvOGxzy3GjL8WTOAnaMiWAZwA8D0AVt4FXsYrY4QbwHoAPFxy28XgNGhfiJGjLCgBUA9AtebBVrGL50AWgecFh61/qQEsiToK2LBdAM4D8pT7IKlaxghgAUL3gsI3EOkBMxCHtl9cAVMV641Ws4gFAC4DXYrGDRBOHVMvew6qhv4o/DfgAPC9WfRNFnARtWTWAJnHPtYpVLB3K9FQo5CnIz83mPO6fD2JkzAe314e5+WAst6hZcNiahZ4smDgJ2rL3ABhieaJVrBxUWQro8tTIzVRAmZ6KnMzNnOf5pmbgm7yFfvcoBkZGMeAeXeEnjQ5dnhq6p3YgX5UNhTxF8HUe7wT63aOw9DrhHvOJuaVlwWF7XsiJgoizSpoHG8r0VFSWFkOXpxY1wZjwB4LoGnKhpbNH7GSLK5ISJagsLYahSBPzuzDhm5rBic4eWHqdQiWRIPJEJc5KkSYtaT2e2KrEduVGSNeuxTbFRgDAtH8e03Of44rvJn5xbRzXp24v96OwYNhxHYYdXgCAZTgTluEMXPzHC/Txmu4dcN/csKLPREGVpUDTi2XQqLjVl1jhdI/idYt9xaWQyaBHVWkxZFJJ3Mf2B4IwnrTB0usUcnpU8kQkToK2rBnL7DnLkCfjhcJv0USJhmn/PM45h+FwfxLxPOaEH7n5CIzd6piez7TbA9PuKwAA84XtMF/IwULD+/RxbevTGPDKYxo7ViQlStB45ADKC3cu632c7lEcbGjD+OStZb1PviobHS8djouEiQaPdwLfbWgVIlVbFhy2ar6DX+Y7kKAtex7LTJp9GjWav1cqmDQAkCZLRNWeAhw/sAfSdWt4z1NsmIcmYxqajGnkbvosHo/7QCBflQ3v2eZlJw0AaFTZcLXVw1CkWbZ7mAx6OBrrVoQ0AJCTuRkXG+uEvFMVyQFOcBKHTJ0R7GFQpqei46XD8J5txoLDRv93u7sNdnMN8jlUieqSAuzTxCYFAGCbYmNU8vypoaq0GI7GumVRZfggk0rQXluBjpcOx33sjpcOw1Suj/u40UC9U+ORA9FObSa5EIYEngveAyAT8hCNRw6gUl/E+4AleWqU5KnhdI9Cb2rC3HwQ+zRq7MrZKmT4iNgiT0bds0U4duY8/Z1q0yyaSoah2BBgfUfZJbve3Q0AUG4IwFToQX7GFH2u83oabcfEAuWGADq+c4n+PD6biIM/ejKmsULR8dLhFZEyfKDuffCt1riMd7/fBwAq9UVISpREeicZCC4UhB4IkzikeBKUQtPx0mFe0oRCo8rGxcaXkZQoge7x7YKuEYJtio3QqhZJmPTwPWgyplnEka37I622AYT9M/aDD1Guvs46T5Mxjfa9l/Grmp8g6eF7op4j6eF7sD8/QN9HtWkWLYNfW+LbEYjHJOsackFrrIfWWA+rMAM5DOWFO+MieR4E0lAoL9wZTfLkc6lsLOKQqTSCVLSq0mLRL5+TuRkdtYfR9Ysroq6LhpJvCieiatMs2vdeZn3nv/MQ63POxlnYDQOinqFj72XkbJylP+96d3dcvG2GIk1cSPNtUxOc7lE43aM41NAGs8Ue01hLJY/JoH9gSEOhUl8UzeZpJrlBI1TiVEOgimYyxKabluSpMeL7NKZr+bBFnkz/PeCVI6F2P8wXFsnkvJ6GhNr9SKjdj1d3e+jv/Xcegrb1aSSb9iKhdj+srkUVTZMxjfzMKUH37/jOZZQ89jv686EPnowLafJV2WivrVjyOJSE+b6+CK+QNsWJzh6c6OyB2WJHKalCC0V54c6YHAb5quz7YtMIQeORMijTU/kOy0BwgwZNHJJRvO43JvJV2UsyUAt35OBqnMkjFMwJbuzewXIlH/zRk/DNSunPOsa5fDDsuI5y9XX6s/nC9phtJCaSEiVxM8gpUpgMpTAZ9MjJ3Ax/IIijp2x4w2pH95ALWuObosgTZaKFIZ7vsxyQSSXoiLxIVTOlDlPiPAOB0iYWeLwTMFuJ1a1ryIUf9l1C3Zkf4/h/9OGc04UbKxDYVDLsGQAY4ZAKXb/+C/pvIW5sJml8s1KYL+Qs4QkXYTKULtlFazx5Bg9py+AkA5mU5KkqLabPeaWcIJLHOyHK9hEw0VioLC1eMZdzrNCosiNJUhkIjgBge9UESRuxsPYNwmyxQ5X8K+i2/Q4F2+eh0U3Tx53X0zA+m4iuS1/F5d9/Hc/F4HGb9s/H9GxiHQDRoNgQgGm3Z8nkUaanCna68MFsseMdey/rO0uvE5WlxSjJ2wGgDQBgKNqJ/NxsPG2sx4nOHlQySBUNGlU2dHlqdA25Ip6nTE8VpaK1dPawxixQZcdsGoiFyaCPlF1QDcLLRkgc0lctuNR5wD0KfyCyWPd4J6A+XAf3pRq4XjyJToMT5errtGeLgiZjGuXq6+g0OHH5n85g9mYHqk93ipJADvc1QeeNz0pZjoD8DLYNk/TwPege+y39uV9gRoDzehr9t2n3FcG2ER/iMUmodBmNKhs/JWM/Hu8E3GM+JCVKaAO9a8hFJ1H6pmZEp9kIiIWIIiNA2F+UI8PpHoXZao8141k0FPKUSFJHRcV1KFXtGb4z+WDpHeQ95vFO4B+OmdD09A/x9h4XZOv+KGhMxYYA2vdexr8W2/HWfwgjT/DuPXR/FO6l899ZDIxqMqZRtfNjqDbNslQx0+4rqNr5MQAyBrP3Mss9zTyXD0fPq6G35LNsI7thIGZppkxPjavXSZenRr4qG+VFxJjUalry1A4AxCQFgHJyslh72KvtgHsUWmM9Sk1NnGkqCnkKZ4CbQlKiBIYi4e/TNeSCb2om7HuBOWZxQZSF6xlgkTgFYgc3Wzrh8U6Efe8PBPEPx0z4rwPdYdJFKEoe+x1+/N2f4NiZ8xHVsODdezhmPY/AnfBJGmq/vL3HBVf1T2Duy2FJnbf3uLDQ8D7GfvAhy3FgdWUI8oyN3NyAuT+sgd6yGPqSrfujaHc2BbGrMxd8jNwySoJQq6iVXPCoTGrf1AzcYz56cncNuejV3XjyDJ421sPpHiUdCPWcK39VhGfW5e0Q5UhiEoR5HUXwlYBCngJVFm+dZgGwBOLMzQexy/hmGHmMJ21o+jsHK6YRC3I2zuKNwsto6e7nPE6Rhi9b2n1zQ1h8BgAUj8xj17u7OY9RsLoyRCeFum9uYLnANRnTMDFc30Khy4s9DQkA3GM+ZO2vgdM9ir/8ajr+93+/gPHkGQCgvWmU/VBC3utEZw8U6anQqLLhDwTRPTQM3+QtvGPvhUwqwSvleijkKfAHgnB7w6VOSZ4aSYnc5BDzPuOTt9DNsG3sb9TQf8eiRi4FEdS1AgBIIHW2mLxpc/NBWHqdePvFMgDEy41c6UK7NrobVwgqn/oYJwa/hmn/PNJkiaxjh945yylp6Gf7wxrsenc3qnZ+DOUGQmqN3HwEblJCZP7LMzDsuM6yacZnE2EZzmC5qAeuy2G+sPg3ABZBfJ8tPtdSnQKqLMWSPU8UKfQ7/wqOX/0a//27SQCEpKl+9m9o75kuT42q0mK8Y+9F15AL7SAcBU73KCy9gxgYISZpZWkxTAY97XFT8jxfviqb00nAV7HJBStD/c/J3Ix8VTZK8tQ0mSw9zohqYSjcYz6MeH3wTRKqnypLgXxVNi/JmSjgv48sQVumTADRKDBmGIo0tOdsfPIWOr7z8VKGC0Plzo/xi2vj2KbYCOm6tTSBMuQpuOK7GfFa980NvLlic39Yg5bBr0VNixnwysPKBiIRZCnkifBjiUZ5sQb2wV/Sakf3kAv/NfhL5GRuRjepjinIClGPdwID7lGU5O2ATGojjHJyHEPRTrjHfPBNzSAnczMUPLGb/NyvhxFHlaWIWU2jVnxDkYYmjrVvEI1HDkSd+C1kcJfLVgIW02wijcNXOUtC+WXEoKYxoTc14eBbrXTNRu6mpaloocjd9BlO911C1elOvPDOWbSc78e0f56VnyYWyvRUmAx6mAx6UUE8IaDGFbMyUoigVwsGpRolPrwOAGH0t9cStS4e7wS+rvgKZFIJLUHs5hqUF+6kV2KmalWSp4YiPZVWkSK9Uy7HRMvNFP4+oU4Biji6PDWLfJGcBHPzQXyj4hiOnrLxkgYgCLjL+GbUZ4rwvgW89ThCEVrktFTbpvvXXyULxrbD8+kGlpcLABzuT/DCO2ejSptIUMhTYCrXw0Tq7vEENa4YFYUCnxrEhQH3KLqGXDBb7CxvF6Xu9X3kBrAY9Ow010AmleDfL15G9bf/hj5fkZ6KdkZEn+mcoCYOTZzcr/M+D1cVqiJd+PswCRFqMzG9cpGcBHPzAdrmlkklMJUTtT6Oxjp0mmtomw4gPL/RPHWRFlW+soIVB2WQz/1hDf2DdZ0Pwn/7N2Hn5quysQBikkSr5KPG8k3NCKpkTEqUQEWulHOBIO/4qiwFksiVMF5Gq9ASaGuvE4ca2ujPb1jttFu45KkdMBn0aOnsgUaVDad7FCc6e2Ay6NF4pAyHGtrwuqUTw631nGOrshRor63A3HyQJhH1byBWigqV5qFOgVDDvLK0GCfIYC7lJOB6FirQOuL1oaP2cJgqpstTQ29qWrSZegcj5txFIn7cieO8nibaDW11ZeDgj57krDn3Tc1AT8YQqkhDNfS48eQZOpDnaKwjxuwbDBPzhxraYCjayZqg1PlZ+2s4M3eZ9weIf/zGIwdYksofCKL3Iw/2/vUT9HeU5NEa6+NCrLl5wqOlylTQmc3lhTshS5Sgm1RzrH2DsPYNQiaVID+XCGo63aN4w2qHLk+N8iINxidn8IbVDq2xHo7GOk71sJwxmXyTt2j7Jpptka/KZr2rUAnKdAoo5ClhnjglwxYDIjsJogWPq0qLWSSNFXEnzsjNR0QRx3/nIRi71bwFcQp5Cl4lVxGutA2FPAWd5hpojewVlCuI2F5bQedthaKSp0xCIU/BxcY6JJdUQJenRqe5JuwcmVQC3VNLcyNHgvHkmbD0GYAIYlJEdo/5MEC2RPJ4J8Imh/GUDY7GOpgMevgmb8HaN4iDDa1wkDVSfBghJ6sYe0UsmCoTn/u6qrSYlrLRnATjk7dg7R1EP/lbK8l+bLq8HXF75iXbOKE4IbJ4yzKciSTZV2jS+ANBaI31yNpfA2vfIDzeCdScPEMH2ajjCdoyHD1lo8dpCkn98E3N4FBDG1J0bLK8/9Mh1nVHT9mgNdbDbOkkWgnZe5G1vwYpugp68smkEuSrslnpJUdP2ZCiq4DZaodvagbffrWFRV5r3yC0xnrOuIcYWHudNGlC7bFvm5qgrjhGS6DK0mK42o7jVlcb2msrUMKQuMzV/+0jB+gVPFpW9MAIoSrHw3HBhVCnAF8AODSQymefmC12ZO2vgdlqp1N2rH2DONTQhsznqmHpiU8GQtwlzvisFOYL2+nOMNHgvrmBJXaNJ220uKdKWpllDC2dPfTxls4e2tcf6j48+FYrfV6/e5RWz8Z+z84jGyFX6qRECSy9ThSostFRW4FxUpemDMqsr8jpiXvC3osW0kg1W+ycRWHjk7fioqKNkzGI7+uL0HjkAObmiQDlwAjhHPB4J+DxToTZOeVFGlrlCrUJkhIlcDS+jKznquHxTuDoyTMsBwETblLixEKc8akZRKvaYRKAymTg84ipshT0IniisycsY8HS64TZuvhbMPPOxidvoWvIBWsff6qYGCyLc8B8IQfKRwKslPtIYBph0Qx4KjBHYcTroyd35ldib9NkN9ewbB8NADBUNynp3gUI781KgVJHBtyj8E3egiI9lSZFO/l918+Gw+yc4dZ6erJz2QMEeeqIUuq+QaiyFJyrvVOAK5pC6EIR7bcMdQr4pmbCVG4+cDkJmAsYV6UqX7YL7z0m+V3acVfVKBz80ZOsCDsfVJtmWQ8YzROje4qtpzKDht7fx56VzCQNpb4xf9SpzxYb2sc79kOBy/4qL9LQalXW/hpkPVcN48kzrNhK45EDGDvbjLH3m/D2i2V4pVwvKDquylKg8QiR9WG2hGcgU/eIEgzkRaSJB7CdArEgVO1iSiqurO2kREmYSh8JkYifAGLbt1cFjyYC1uHMqCqb7rHfouX0JfgDZZBJJfQPOTcfQFVpMVRZCuwy1sMfCEImlaBSXwTf5C2MjPlgKNbQE57P6I+GpiMH8Lqlk/7sDwTR7x6Fe8yH/NxsWppNfuaHxzuBnMzNKC/cSahiI6MwFGugy1OHdYmsKi2Gb3IGXUPDglPiuc6j1KpUHVE05puawTv2XjqPTJenRgnVX5lshSsG5UUaWHoHCVuArNehQEl3IdKGaxWPJnFCEzqFqIOUlw+I7CQQsnBEQwT7tD8BxJ6JywLdNiIPzPPpBrzetx1JD/8Rqk2zdGXl+Gwixj+T4kv/44fxpA3ttRV0zysmXi3X4+BbrbRHi8qNo+APBFFzykbHVaJhjlFLlJO5GZ3mGoxO3ET25k2QSSW4SLqoQ9NFvtvQiotkbYupXA+ULx5rPFIWNhHaayswZwpELfSiwLSpmKB+QJmU6Ks8Nx/AgHuUyDsjVTOACBxSbmcxqCwthtNNNF6niDM3H6SDjaFSngsjHJMsko0X6hRoPFImqI8BVeawOM4wfZ1MKqHrxPhiPSMC+2J7vBORFrzxL5P7IvoFjSYSusd+i0MfPIlvNP0tun79F7AME0HOXe/uxq53d5PqXA7GZ6Ww9DpRamoKMwwpt2nXkAulpqawlc3pHsUuY72oRuHuMR/LSKSMa0pqyaQSzM0HwwxJ95gPu8g0e65nAMAKTEZK++BCfxSp6Q8EYSgi8qxcbcdp1YwiW/eQC4ca2kQXfVETjHndoYZW+ANBaFTZwuybEe5n54uZdP1smP6bkJzCXMWhOxe0MDIJmK5s/StNrIVsfPIWzBY7y6MaCRF+C/+Cwzb+pS+++AIJ2rIP8YDt36lMT40o6pMSJXGpCuQaR+jYkTIXoj0/H7xnm8Pczr7JW8jaT0jbnMzNqCotplUzCnPzQZbdI1ZVeUhLNG/vNNfgUEMruodckEklcLXV8yZ2MpGiq+D8NzMUacI0iLn5IFJ0i9+JbTnV0tnDIoCLdIQIMf6ZUono9VfHeZ76cB3fb9u14LA9Q3nV+vGAESfapItXKS3XOELHjiTlYm1U3jXkCgsEK9JT0V5bAeNJGzzeCVqq5WRuhqFIg3xVNr0vTixgFr5pyYknkxJeNyGkobKtud9nGI2k/UphgBEeACIXwnHBUKRhqb/97lEiBSpRgouNL9OZJMzyfso1rctTo4YkHVdiKgC6uI8H/QC5WwFZk3ND1NP/meOJR5W44rsZsSYoFijTUzH2Pvemd3PzQWQ9V83Z70EhT0F5kSamfgVUw0Kq9kVDxrKEkAYA3bmID/ercyclgRXyFFGe0KOnbCwVMARbaFUNABK0ZSMQ0bDjfkCr2gptzqNweK5F3eaDQoY8Gcf2FiFNlogbU7dRdboz+kVR8MSjShx7tjBu44XiYmMdb8LnQ1rCMfKfpKOk+2fDRIxnagYKeQqG246LVtMOvdUKa98g3n6xjC72Egrf1Awyn4vcICnSYvCgwR8IIvO5aj4J6l5w2HIBdhxH8O4E8cA+jRrdL1eI2rEgTbYe2xQbkSZbL/gaijQAMO3/XPRzcuGK7yZuTN1etl5wr0doT0vZP0dPnsHAyG9QWVqMsbPNGG6tj4k0TCcI1dhDDIS00h2fvEVnNz/o4IpnMUBzhEmcD7FM3jWxyJAnY7tiEzIYrW0jIS1pPe/5FGlazvej/oM++nvpujXYrtiE7YpNEbcK4Ro7cOceqk53ojmkH4LQMaNhgMyv4gJVV0PFc3YcrkNKSQVOkKlIYm2/o2Q/gvLCnYJVMwpOMqlUCMyWzqgtxe43PN6JSCqaHwRHAITsyJagLXsNyxQMZeL4gT1hm0mVvNkG6bo1qHu2iHXsxtRtHDtDdLLZp1Fjn0aNc04XzjldnOdP++dx/INeSNetRf2Bv2fdg7rue4Xfwp5vbqO/D969h7MDLrrNVPfLFfS9mX2pz390Faf7LmG7YhM9dsmbhKFOPRtzzNN9lwSrlKFISpTAe7aZt/TYPeaDpddJx3OYoOI5oZ63UDDresbebxJNnAieJ07wZZc/KIjyPq8vOGyvUR9CU26asQJS58bUbbrt07R/nu4jTZGA2K7QRU/cume5u1pWlxRgm2Ijgnfv4ZzThau+T5EmS8SxvUUI3LnL6k991fcppv2fY59GTZOGUrcka9fghcIn8cSjStb4W+TJxB6k5LMyycaEVrWVJs35j67ioucTSNauQdWeAqQlCVcrmZibD0bci4ZIl2HHcyi7iIrnZO2vobOnqVw3H5nsWGpqoknTLsIRQOHoKZvoTXa7hlwPrMp2qKEt0vv4EWLKsJI8Fxy2uQRtWTWAf1uexyNwuu8S5u/cxT6NGg73NZxzupAhT6YlxznnMKbn5glp82whtik2hqlhaUnr8fhWJQDg7ABBsqu+T1G3txBpskRI163FsTPnaelBbT71w+8/B2BRegBA3d5CPL5ViZJvbsfPr43T96AkVFrSevzwn/fxvg+1zcgvPhmnr5euW4PHtyqhzdmKc87YCqe6hlwwW+1R28dSqTZEVgFf9nT4dVSKk9hMA2vfYCSVJiKMJ89AKU/hzJC4X7D2DUZTOasXHLY55hdh2dELDtt7YjaXihek69bSf1ftKYh4HADkDAfBC4XhnWy2yJM5+xJQNg+TID+/No7HtyqRkc4mJyWxpuciOxUode7xrUqazBS2KzbhHGKvODRb7KK6eyYlSsKypwdGRsPSX6jUHLHOBI93Ysm7sh1saMXFxpdjTh6NJ6x9g9HeZ2DBYXsv9Eu+soLnAYxgGXcvoJAYQgiAkAbzd+6yvpvyf45tWLRlAozjFz2fYCpkckfzeKUlJQKkZM4gPVXXJ2PzklF93676Pg0jazw8edQPG0ssJF9gyowQeLwTgrrDRAMV4e+oPXxfJY8A0vhBcCEMnGUFZP7asuxeEArKPrjiu4ngXSKYmJZETMLAnXvQqh4l7JMQYlxn2Elb5Mn0+U88qsSNqdu8XXAueghj/XuF30LJN7ezHAWxds65Sl6XkZ6Maf/nuDF1GxnpyUhctzZm50AoDr7Vel/tA2vfIL5RcSyuGRt6U9N9e6ejp2xCJGc1yYUw8BaykSpbLpZpy3ZqJZasXYN9GjWu+j5Fc3c/qksKwlSekse3cU7q4x/04nj5HmyRJ7M8aFrVVpYqxsTpvkvYIk/GFnkyS8W7MXWbs3m7EDDHZKqZwbv3cNY5HLfsAiMZu+l46fCK7jwdJZK+JKz0O4U2X4mAFi4VjQLLHc2FBG3ZewAMYh9QCLSqrUiTrce0/3P8/No4AnfuIS1pPZ7YqqTjIDembtMk2K7YhG2KjSyVSLpuDbQ5j9LnT/s/Z63ylLeLaaBL163BE48q6UAq3zUOzye0pGOOk5a0HlpyDx/muNT7AESsx+G5FveUHIDc3WwF1BynexQ1MXjPYkFSogQmQ+mS9wXigz8QRAu5daMAWBYctucjnRCVOMDykmcVsSNflY1XDXrB/diEwjc1A7PFvqJba1CguqyGtvaKFRRhTnT2CFUzo5IGEEgcYJU8DzLyVdl0JepSJlv3kAuWXqfgwrvlBNGOl2h/lZ8rbs9ZakeGrp8Ni30XQaQBRBAHAMgYz/+PbL0/U+jy1FBlKVBAlhpEmnBO9yhGvBMYGPlNTOk6KwlVlgK5mQq6sQuz1wRVdOYe82E8cklAJNQsOGyC8zVFEQcAErRlBSD2QVy+DnWriCuU6al0cqjQVsB/RvABeH7BYesXc5Fo4gD01u6vYZk8bqtYxQqhBcBroVkBQhATcSiQ7upmrHCWwSpWsUQMgIjRjMQ6wJKIQ4FU36rxgJVfr2IVIegC0CxWLeNCXIhDgSzBfgZEmsIDXU26ij8buEHY5B/yZQHEgrgShwnSDioAkEv+X4lVh8Iqlhc+EH0C+0HkWvbHYr8Iwf8BAIEIPPJ18nAAAAAASUVORK5CYII=" alt="Teletolk"></p>
-        <h2>Contact opnemen</h2>
-        <p>Postbus 9105<br>6500 HG Nijmegen</p>
-        <p><a href="">Contactgegevens</a> van gemeenteraad en griffie.</p>
-        <h2>Adressen</h2>
-        <p><a href="">Bekijk openingstijden</a></p>
-      </div>
-
-      <div class="nijmegen-grid nijmegen-padding-block-end-300 nijmegen-padding-block-start-150">
-        <div class="nijmegen-g-col-lg-4 nijmegen-g-col-sm-6 nijmegen-g-col-12">
-          <div class="nijmegen-card">
-            <div class="nijmegen-card__inner">
-              <div class="nijmegen-card__content">
-                <h4 class="utrecht-heading-4">
-                  <a class="nijmegen-card__link" href="/">Heading</a>
-                </h4>
-                <p class="utrecht-paragraph">Mariënburg 30 <br>6511 PS Nijmegen</p>
-              </div>
-            </div>
-            <figure class="nijmegen-card__figure">
-              <img loading="lazy" src="https://picsum.photos/200/300?random=1" alt="Image description">
-            </figure>
-            <div class="nijmegen-card__footer">
-              <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="tabler-icon tabler-icon-arrow-right "><path d="M5 12l14 0"></path><path d="M13 18l6 -6"></path><path d="M13 6l6 6"></path></svg>
-            </div>
+      <nijmegen-accordion>
+        <div class="utrecht-accordion__section">
+          <h2 class="utrecht-accordion__header">
+            <button class="utrecht-button utrecht-button--subtle utrecht-accordion__button" type="button" aria-expanded="false" aria-controls="utrecht-accordion:r1:-panel" id="utrecht-accordion:r1:-button">
+              <span class="utrecht-accordion__button-icon">
+                <span class="utrecht-icon">
+                  <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="tabler-icon tabler-icon-chevron-down "><path d="M6 9l6 6l6 -6"></path></svg>
+                </span>
+              </span>
+              <span class="utrecht-accordion__button-label">Title 1</span>
+            </button>
+          </h2>
+          <div id="utrecht-accordion:r1:-panel" class="utrecht-accordion__panel" aria-hidden="true" hidden="">
+            Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
           </div>
         </div>
-        <div class="nijmegen-g-col-lg-4 nijmegen-g-col-sm-6 nijmegen-g-col-12">
-          <div class="nijmegen-card">
-            <div class="nijmegen-card__inner">
-              <div class="nijmegen-card__content">
-                <h4 class="utrecht-heading-4">
-                  <a class="nijmegen-card__link" href="/">Heading</a>
-                </h4>
-                <p class="utrecht-paragraph">Meijhorst 70-39<br>6537 EP Nijmegen</p>
-              </div>
-            </div>
-            <figure class="nijmegen-card__figure">
-              <img loading="lazy" src="https://picsum.photos/200/300?random=2" alt="Image description">
-            </figure>
-            <div class="nijmegen-card__footer">
-              <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="tabler-icon tabler-icon-arrow-right "><path d="M5 12l14 0"></path><path d="M13 18l6 -6"></path><path d="M13 6l6 6"></path></svg>
-            </div>
-          </div>
+        <div class="utrecht-accordion__section">
+          <h2 class="utrecht-accordion__header">
+            <button class="utrecht-button utrecht-button--subtle utrecht-accordion__button" type="button" aria-expanded="false" aria-controls="utrecht-accordion:r2:-panel" id="utrecht-accordion:r2:-button">
+              <span class="utrecht-accordion__button-icon">
+                <span class="utrecht-icon">
+                  <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="tabler-icon tabler-icon-chevron-down "><path d="M6 9l6 6l6 -6"></path></svg>
+                </span>
+              </span>
+              <span class="utrecht-accordion__button-label">Title 2</span>
+            </button>
+          </h2>
+          <div id="utrecht-accordion:r2:-panel" class="utrecht-accordion__panel" aria-hidden="true" hidden="">
+            Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</div>
         </div>
-        <div class="nijmegen-g-col-lg-4 nijmegen-g-col-sm-6 nijmegen-g-col-12">
-          <div class="nijmegen-card">
-            <div class="nijmegen-card__inner">
-              <div class="nijmegen-card__content">
-                <h4 class="utrecht-heading-4">
-                  <a class="nijmegen-card__link" href="/">Heading</a>
-                </h4>
-                <p class="utrecht-paragraph">Korte Nieuwstraat 6<br>6511 PP Nijmegen</p>
-              </div>
-            </div>
-            <figure class="nijmegen-card__figure">
-              <img loading="lazy" src="https://picsum.photos/200/300?random=3" alt="Image description">
-            </figure>
-            <div class="nijmegen-card__footer">
-              <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="tabler-icon tabler-icon-arrow-right "><path d="M5 12l14 0"></path><path d="M13 18l6 -6"></path><path d="M13 6l6 6"></path></svg>
-            </div>
-          </div>
+        <div class="utrecht-accordion__section">
+          <h2 class="utrecht-accordion__header">
+            <button class="utrecht-button utrecht-button--subtle utrecht-accordion__button" type="button" aria-expanded="false" aria-controls="utrecht-accordion:r3:-panel" id="utrecht-accordion:r3:-button">
+              <span class="utrecht-accordion__button-icon">
+                <span class="utrecht-icon">
+                  <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="tabler-icon tabler-icon-chevron-down "><path d="M6 9l6 6l6 -6"></path></svg>
+                </span>
+              </span>
+              <span class="utrecht-accordion__button-label">Title 3</span>
+            </button>
+          </h2>
+          <div id="utrecht-accordion:r3:-panel" class="utrecht-accordion__panel" aria-hidden="true" hidden="">
+            Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</div>
         </div>
-      </div>
-
-      <div class="nijmegen-html">
-        <h2>Hulp bij contact</h2>
-        <p>Bent u doof, slechthorend of heeft u moeite met praten? Bel <a href="#">Teletolk</a>.<p>
-        <p>Ga naar de <a href="#">Stip</a> (of bel <a href="#">024 350 20 00</a>), het steunpunt in uw wijk, voor:</p>
-        <ul>
-          <li>bellen met de gemeente</li>
-          <li>uitleg over brieven</li>
-          <li>DigiD aanvragen</li>
-          <li>hulp bij regelingen aanvragen</li>
-        </ul>
-        <p>Ga naar het <a href="">Informatiepunt Digitale Overheid</a> (IDO) in de bibliotheek of bel <a href="">024 327 49 11</a> voor:</p>
-        <ul>
-          <li>online zaken regelen met de overheid</li>
-          <li>DigiD aanvragen</li>
-        </ul>
-      </div>
-
+      </nijmegen-accordion>
     </div>
   </div>
 
